@@ -1,0 +1,7 @@
+.containerPage{
+    display: flex;
+}
+.divPage{
+    display: flex;
+    justify-content: center;
+}
