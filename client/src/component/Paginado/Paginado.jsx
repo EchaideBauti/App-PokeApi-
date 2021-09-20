@@ -2,18 +2,18 @@ import React from 'react';
 import stylePage from '../Paginado/Paginado.module.css';
 
 export default function Paginado({pokemonsxpage,AllPokemon,paginado}){
-    const pageNumbre = [];
+    const pageNumber = [];
 
-    for(let i = 0; i < Math.ceil(AllPokemon/pokemonsxpage);i++) {
-        pageNumbre.push(i+1);
+    for(let i = 1; i <= Math.ceil(AllPokemon/pokemonsxpage);i++) {
+        pageNumber.push(i);
     };
 
     return (
         <div className={stylePage.divPage} >
             <ul className={stylePage.containerPage}>
-                {pageNumbre.map(num => (
-                    <li>
-                        <a href="#" onClick={()=> paginado(num)}>{num}</a>
+                {pageNumber && pageNumber.map(num => (
+                    <li key={num} className={stylePage.liStyle}>
+                        <a href="# " onClick={()=> paginado(num)}>{num}</a>
                     </li>
                 ))}
             </ul>

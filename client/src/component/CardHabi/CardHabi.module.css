@@ -1,0 +1,13 @@
+.containerCardH{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.pStyle{
+    
+    font-size: 18px;
+
+    
+}

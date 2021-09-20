@@ -13,7 +13,20 @@
     margin-right:5px;
     outline: none;
 }
-
+.formsearch{
+    display: flex;
+    justify-content: center;
+}
+.dbapi{
+    position: absolute;
+    top: 127px;
+    left: 915px;
+}
+.filterType{
+    position: absolute;
+    left: 1118px;
+    top: 127px;
+}
 
 .button{
     border:4px solid rgba(255, 217, 0, 0.76);
@@ -24,4 +37,12 @@
     color:rgba(255, 217, 0, 0.76) ;
     -webkit-text-stroke: 0.7px blue;
     font-size: 22px;
+}
+.btnActualizar{
+    position: absolute;
+    left: 125px;
+    top: 120px;
+}
+.btnActualizar:hover{
+    cursor: pointer;
 }

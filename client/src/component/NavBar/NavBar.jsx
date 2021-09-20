@@ -11,13 +11,16 @@ const NavBar = () => {
                 <div>
                     <Link to='/'>
                         <img src={Logo} alt="Logo"/>
-                    </Link>
-                    
+                    </Link> 
                 </div>
+        
                 <div className={style.containerButton}>
-                    <li><a href="/#">Crear Pokemon</a></li>
-                    <li><a href="/#">Favoritos</a></li>
-                    <li><a href="/#">Sobre el</a></li>
+                    <Link to='/home'>
+                        <li><a href="# ">Home</a></li>
+                    </Link>
+                    <Link to='/home/create'>
+                        <li><a href="# ">Crear Pokemon</a></li>
+                    </Link>
                 </div>
             </nav>
         </div>

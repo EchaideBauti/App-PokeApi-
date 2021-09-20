@@ -9,16 +9,26 @@ const pokemon = {
   name: 'Pikachu',
 };
 
-describe('Pokemon routes', () => {
-  before(() => conn.authenticate()
-  .catch((err) => {
-    console.error('Unable to connect to the database:', err);
-  }));
-  beforeEach(() => Pokemon.sync({ force: true })
-    .then(() => Pokemon.create(pokemon)));
-  describe('GET /pokemons', () => {
-    it('should get 200', () =>
-      agent.get('/pokemons').expect(200)
-    );
+// describe('Pokemon routes', () => {
+//   before(() => conn.authenticate()
+//   .catch((err) => {
+//     console.error('Unable to connect to the database:', err);
+//   }));
+//   beforeEach(() => Pokemon.sync({ force: true })
+//     .then(() => Pokemon.create(pokemon)));
+//   describe('GET /pokemons', () => {
+//     it('should get 200', () =>
+//       agent.get('/pokemons').expect(200)
+//     );
+//   });
+// });
+
+
+describe("GET /pokemons?name=xxx", () => {
+  it("esponder con un estado 400", (done) => {
+    return agent.get("/pokemons?name=xxx")
+      .expect(400)
+      .end(done())
   });
 });
+

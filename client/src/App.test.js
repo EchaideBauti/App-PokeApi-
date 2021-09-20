@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Footer from './component/Footer/Footer';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+test('renders Footer text', () => {
+    render(<Footer />);
+    expect(screen.getAllByText('©Bautista Echaide')).toHaveLength(1)
+  })

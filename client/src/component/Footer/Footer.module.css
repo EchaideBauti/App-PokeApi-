@@ -1,0 +1,20 @@
+.conainerFooter{
+    width: 100%;
+    height: 61px;
+    display: flex;
+    margin-top: 14px;
+    background-color: rgba(255, 217, 0, 0.76);
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+a{
+    margin-right: 10px;
+}
+
+.containerRedes{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}

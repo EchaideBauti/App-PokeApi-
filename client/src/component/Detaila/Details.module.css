@@ -1,0 +1,40 @@
+.containerPrinc{
+    
+    margin-top:110px;
+}
+.containerCentr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.p{
+    font-size: 28px;
+    border-bottom: 1px solid black;
+}
+.pTitulo{
+    font-size: 28px;
+    border-bottom: 1px solid black;
+}
+.detalle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.contaiBtn{
+    display: flex;
+    justify-content: space-around;
+}
+.stylebtnhome{
+    
+    position: absolute;
+    top: 790px;
+    left: 600px;
+    
+}

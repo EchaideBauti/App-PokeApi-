@@ -1,8 +1,8 @@
 .container{
     border: 3px solid rgba(255, 217, 0, 0.76);
     width:200px;
-    height: 300px;
-    margin-top: 5px;
+    height: 290px;
+   
     
 }
 .container:hover{
@@ -27,5 +27,5 @@
 .img{
     display: flex;
     justify-content: center;
-    margin-top: 20px;   
+    margin-top: 10px;   
 }

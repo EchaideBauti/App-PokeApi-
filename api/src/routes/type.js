@@ -22,6 +22,8 @@ router.get("/", async (req,res,next)=>{
             for(let i = 0; i < GetType.data.results.length; i++){
                 await Type.create({name:GetType.data.results[i].name})
             }
+          
+            return DB_Type;
         }catch(err){
         next(err);
         } 

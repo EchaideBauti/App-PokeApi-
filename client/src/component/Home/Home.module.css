@@ -3,4 +3,15 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.filterAZ{
+    position: absolute;
+    left: 988px;
+    top: 127px;
+
+}
+.filterFuerza{
+    position: absolute;
+    left: 1040px;
+    top: 127px;
+}
 
