@@ -12,7 +12,7 @@ import Footer from '../Footer/Footer';
 
 const Home = () => {
     const dispatch = useDispatch();
-    const AllPokemon = useSelector((state) => state.pokemons);
+    const AllPokemon = useSelector((state) => state.allPokemons);
 
     //PAGINADO 
     const [page,setPage] = useState(1); //pagina actual que arranca en 1

@@ -4,6 +4,7 @@ const initialState= {
     allPokemons: [],
     types:[],
     details:[],
+ 
     
 
     
@@ -15,15 +16,16 @@ function rootReducer(state=initialState,action){
             return{
                 ...state,
                 pokemons: action.payload,
-                allPokemons: action.payload
+                allPokemons: action.payload,
+            
             }
         case 'FILTER_TYPE':
-            const allPokemons = state.allPokemons
-            const typeFiltered = action.payload === 'all' ? allPokemons : allPokemons.filter((e) => e.types1.includes( action.payload))
+            const allPokemons = state.pokemons
+            const typeFiltered = action.payload === 'all' ? allPokemons : allPokemons.filter(e => e.types1.includes( action.payload))
 
             return {
                 ...state,
-                pokemons: typeFiltered
+                allPokemons: typeFiltered
             }
         case "GET_DETAILS":
             return{
@@ -31,11 +33,11 @@ function rootReducer(state=initialState,action){
                 details:action.payload,
             }
         case"FILTER_CREATE":
-            const OnlyApi = state.allPokemons
+            const OnlyApi = state.pokemons
             const filterPoke = action.payload === "db" ? state.allPokemons.filter((el) => el.id.length > 10) : OnlyApi
             return{
                 ...state,
-                pokemons: action.payload === "all" ? state.allPokemons : filterPoke
+                allPokemons: action.payload === "all" ? state.pokemons : filterPoke
             }
         case "CREATE_POKEMON":
             return{
@@ -75,7 +77,7 @@ function rootReducer(state=initialState,action){
                 })
                 return {
                     ...state,
-                    pokemons: Arr
+                    allPokemons: Arr
                 }
             case "FILTER_FUERZA":
                 let ArrFuerza = action.payload === "+fuerte" ?
@@ -99,7 +101,7 @@ function rootReducer(state=initialState,action){
                 })
                 return {
                     ...state,
-                    pokemons: ArrFuerza
+                    allPokemons: ArrFuerza
                 }
         default:
             return state;

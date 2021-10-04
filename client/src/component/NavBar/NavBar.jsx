@@ -1,26 +1,23 @@
 import React from 'react';
-import Logo from '../imagenes/logo.png';
-import style from'../NavBar/NavBar.module.css';
-import {Link} from 'react-router-dom';
+import StyleNav from '../NavBar/NavBar.module.css';
+import logo from '../imagenes/logo.png';
+import {Link} from 'react-router-dom'
 
 
 const NavBar = () => {
     return (
-        <div className={style.container}>
+        <div className={StyleNav.container}>
             <nav>
                 <div>
-                    <Link to='/'>
-                        <img src={Logo} alt="Logo"/>
-                    </Link> 
+                    <Link to="/">
+                        <img src={logo} alt="logo" />   
+                    </Link>
+                    
                 </div>
         
-                <div className={style.containerButton}>
-                    <Link to='/home'>
-                        <li><a href="# ">Home</a></li>
-                    </Link>
-                    <Link to='/home/create'>
-                        <li><a href="# ">Crear Pokemon</a></li>
-                    </Link>
+                <div className={StyleNav.containerButton}>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/home/create">Crear Pokemon</a></li>
                 </div>
             </nav>
         </div>

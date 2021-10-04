@@ -35,7 +35,6 @@ const SerchBar = ()=> {
     function handleClick(e){
         e.preventDefault()
         dispatch(getAllPokemon())
-        console.log("actualizando")
     }
     //Filtro
     function handleFilter(e){

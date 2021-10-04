@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import {getDetails} from '../../actions/index'
 import Footer from '../Footer/Footer';
@@ -6,16 +6,23 @@ import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import styleDetail from '../Detaila/Details.module.css';
 import BtnHome from '../imagenes/btnHome.png';
+import Loading from '../Loading/Loading';
 
 export default function Details(props){
     const dispatch = useDispatch();
-
+    const [loading , setLoading] = useState(false);
     const MyDetail = useSelector((state) => state.details);
 
     useEffect(()=>{
         dispatch(getDetails(props.match.params.id));
     },[dispatch])
-
+    if(loading){
+        return(
+            <div>
+                <Loading/>
+            </div>
+        )
+    }else {
     return(
         <div>
             <NavBar/>
@@ -55,5 +62,5 @@ export default function Details(props){
             <Footer/>
         </div>
     )
-    
+        }
 }
